@@ -69,7 +69,7 @@ export const updateProjectDispatch = name => {
 
 export const createFolderDispatch = (name, parentID) => {
     return dispatch => {
-        const folder = createFolder(name);
+        const folder = createFolder(name, parentID);
         setTimeout(() => {
             dispatch(createFolderSuccess(folder, parentID));
         }, Math.random() * 25);

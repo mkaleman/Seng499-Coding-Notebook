@@ -30,7 +30,7 @@ const deleteFileSucess = id => {
 
 export const createFileDispatch = (name, parentID) => {
     return dispatch => {
-        const file = createFile(name);
+        const file = createFile(name, parentID);
         setTimeout(() => {
             dispatch(createFileSucess(file, parentID));
         }, Math.random() * 25);
